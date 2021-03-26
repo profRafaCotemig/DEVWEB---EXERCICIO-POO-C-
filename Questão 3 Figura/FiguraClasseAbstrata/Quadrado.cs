@@ -17,5 +17,20 @@ namespace FiguraClasseAbstrata
         {
             return 4 * X;
         }
+        public void Desenhar()
+        {
+            Console.WriteLine("Quadrado desenhado.");
+        }
+
+        public void Pintar()
+        {
+            Console.WriteLine("Quadrado pintado.");
+        }
+
+        public override string ToString()
+        {
+            return "Quadrado\n" + base.ToString();
+        }
+
     }
 }

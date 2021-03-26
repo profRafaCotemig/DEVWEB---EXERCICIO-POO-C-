@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FiguraClasseAbstrata
 {
-    class Hexagono: Figura
+    class Hexagono: Figura, IControle, ISuperficie
     {
         public Hexagono(double x) : base(x) { }
 
@@ -16,6 +16,15 @@ namespace FiguraClasseAbstrata
         public override double CalcularPerimetro()
         {
             return 6 * X;
+        }
+        public void Desenhar()
+        {
+            Console.WriteLine("Hexagono desenhado.");
+        }
+
+        public void Pintar()
+        {
+            Console.WriteLine("Hexagono pintado.");
         }
     }
 }

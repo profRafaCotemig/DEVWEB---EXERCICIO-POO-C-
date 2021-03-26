@@ -2,7 +2,7 @@
 
 namespace FiguraClasseAbstrata
 {
-    class Pentagono: Figura
+    class Pentagono: Figura, IControle, ISuperficie
     {
         public Pentagono(double x) : base(x) { }
 
@@ -16,6 +16,19 @@ namespace FiguraClasseAbstrata
         public override double CalcularPerimetro()
         {
             return 5 * X;
+        }
+        public void Desenhar()
+        {
+            Console.WriteLine("Pentagono desenhado.");
+        }
+
+        public void Pintar()
+        {
+            Console.WriteLine("Pentagono pintado.");
+        }
+        public override string ToString()
+        {
+            return "Pentagono\n" + base.ToString();
         }
     }
 }

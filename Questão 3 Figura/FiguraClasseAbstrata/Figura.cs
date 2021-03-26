@@ -21,7 +21,7 @@ namespace FiguraClasseAbstrata
 
         public override string ToString()
         {
-            return String.Format("TIPO: {0}\n\tMedida: {1}\n\tÁrea: {2}\n\tPerímetro: {3}\n", GetType().Name, X, CalcularArea(), CalcularPerimetro());
+            return String.Format("Medida: {0}\nÁrea: {1}\nPerímetro: {2}\n", X, CalcularArea(), CalcularPerimetro());
         }
     }
 }

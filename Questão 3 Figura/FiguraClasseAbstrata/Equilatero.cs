@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FiguraClasseAbstrata
 {
-    class Equilatero:  Figura
+    class Equilatero:  Figura, IControle, ISuperficie
     {
         public Equilatero(double x) : base(x) { }
 
@@ -16,6 +16,19 @@ namespace FiguraClasseAbstrata
         public override double CalcularPerimetro()
         {
             return 3 * X;
+        }
+        public void Desenhar()
+        {
+            Console.WriteLine("Equilatero desenhado.");
+        }
+
+        public void Pintar()
+        {
+            Console.WriteLine("Equilatero pintado.");
+        }
+        public override string ToString()
+        {
+            return "Equilatero\n" + base.ToString();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FiguraClasseAbstrata
 {
-    class Circulo: Figura
+    class Circulo: Figura, IControle, ISuperficie
 
     {
         public Circulo(double x) : base(x) { }
@@ -18,6 +18,16 @@ namespace FiguraClasseAbstrata
         {
             return 2 * Math.PI * X;
         }
+        public void Desenhar() {
+            Console.WriteLine("Circulo desenhado.");
+        }
 
+        public void Pintar() {
+            Console.WriteLine("Circulo pintado.");
+        }
+        public override string ToString()
+        {
+            return "Circulo\n" + base.ToString();
+        }
     }
 }
